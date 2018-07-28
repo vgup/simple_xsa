@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Cube:cube xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:AccessControl="http://www.sap.com/ndb/SQLCoreModelAccessControl.ecore" xmlns:Cube="http://www.sap.com/ndb/BiModelCube.ecore" xmlns:Privilege="http://www.sap.com/ndb/BiModelPrivilege.ecore" schemaVersion="1.5" id="AN_PROJDELV01" applyPrivilegeType="ANALYTIC_PRIVILEGE" checkAnalyticPrivileges="true" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" translationRelevant="true" visibility="reportingEnabled">
+  <origin/>
+  <descriptions defaultDescription="AN_PROJDELV01"/>
+  <metadata changedAt="2018-05-17 08:37:55.161"/>
+  <localVariables>
+    <variable id="BM" parameter="true">
+      <descriptions defaultDescription="BM"/>
+      <variableProperties datatype="VARCHAR" defaultValue="201707" length="18" mandatory="false" scale="0">
+        <valueDomain type="AttributeValue">
+          <attribute name="_BIC_ZM_CALMON"/>
+        </valueDomain>
+        <selection multiLine="false" type="SingleValue"/>
+      </variableProperties>
+    </variable>
+  </localVariables>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <privateMeasureGroup id="MeasureGroup">
+    <attributes>
+      <attribute id="MILESTONE" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MILESTONE"/>
+        <keyMapping schemaName="NCDOT" columnObjectName="ZPS_AO1900" columnName="MILESTONE"/>
+      </attribute>
+      <attribute id="_BIC_ZM_CALMON" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_BIC_ZM_CALMON"/>
+        <keyMapping schemaName="NCDOT" columnObjectName="ZPS_AO1900" columnName="/BIC/ZM_CALMON"/>
+      </attribute>
+      <attribute id="MLST_USE" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MLST_USE"/>
+        <keyMapping schemaName="NCDOT" columnObjectName="ZPS_AO1900" columnName="MLST_USE"/>
+      </attribute>
+      <attribute id="PROJECT" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROJECT"/>
+        <keyMapping schemaName="NCDOT" columnObjectName="ZPS_AO1900" columnName="PROJECT"/>
+      </attribute>
+      <attribute id="WBS_ELEMT" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WBS_ELEMT"/>
+        <keyMapping schemaName="NCDOT" columnObjectName="ZPS_AO1900" columnName="WBS_ELEMT"/>
+      </attribute>
+      <attribute id="_BIC_ZPROJSTYP" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_BIC_ZPROJSTYP"/>
+        <keyMapping schemaName="NCDOT" columnObjectName="ZPS_AO1900" columnName="/BIC/ZPROJSTYP"/>
+      </attribute>
+      <attribute id="CALDAY" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CALDAY"/>
+        <keyMapping schemaName="NCDOT" columnObjectName="ZPS_AO1900" columnName="CALDAY"/>
+      </attribute>
+      <attribute id="CALMONTH" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CALMONTH"/>
+        <keyMapping schemaName="NCDOT" columnObjectName="ZPS_AO1900" columnName="CALMONTH"/>
+      </attribute>
+      <attribute id="CALQUARTER" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CALQUARTER"/>
+        <keyMapping schemaName="NCDOT" columnObjectName="ZPS_AO1900" columnName="CALQUARTER"/>
+      </attribute>
+      <attribute id="_BIC_ZTEDATE" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_BIC_ZTEDATE"/>
+        <keyMapping schemaName="NCDOT" columnObjectName="ZPS_AO1900" columnName="/BIC/ZTEDATE"/>
+      </attribute>
+      <attribute id="_BIC_ZLSTACT" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_BIC_ZLSTACT"/>
+        <keyMapping schemaName="NCDOT" columnObjectName="ZPS_AO1900" columnName="/BIC/ZLSTACT"/>
+      </attribute>
+      <attribute id="RECORDMODE" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RECORDMODE"/>
+        <keyMapping schemaName="NCDOT" columnObjectName="ZPS_AO1900" columnName="RECORDMODE"/>
+      </attribute>
+      <attribute id="_BIC_ZBACTDT" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_BIC_ZBACTDT"/>
+        <keyMapping schemaName="NCDOT" columnObjectName="ZPS_AO1900" columnName="/BIC/ZBACTDT"/>
+      </attribute>
+      <attribute id="_BIC_ZBPLNDT" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_BIC_ZBPLNDT"/>
+        <keyMapping schemaName="NCDOT" columnObjectName="ZPS_AO1900" columnName="/BIC/ZBPLNDT"/>
+      </attribute>
+      <attribute id="_BIC_ZTIPSUB" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_BIC_ZTIPSUB"/>
+        <keyMapping schemaName="NCDOT" columnObjectName="ZPS_AO1900" columnName="/BIC/ZTIPSUB"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies>
+        <tableProxy>
+          <table schemaName="NCDOT" columnObjectName="ZPS_AO1900"/>
+        </tableProxy>
+        <tableProxy centralTable="true">
+          <table schemaName="NCDOT" columnObjectName="ZPS_O1100"/>
+        </tableProxy>
+      </tableProxies>
+      <joins>
+        <join>
+          <leftTable schemaName="NCDOT" columnObjectName="ZPS_AO1900"/>
+          <rightTable schemaName="NCDOT" columnObjectName="ZPS_O1100"/>
+          <leftColumns>
+            <columnName>/BIC/ZTIPSUB</columnName>
+          </leftColumns>
+          <rightColumns>
+            <columnName>/BIC/ZTIPSUB</columnName>
+          </rightColumns>
+          <properties joinOperator="Equal" joinType="leftOuter"/>
+        </join>
+      </joins>
+      <layout>
+        <shapes>
+          <shape modelObjectName="ZPS_AO1900" modelObjectNameSpace="NCDOT" modelObjectType="catalog">
+            <upperLeftCorner x="70" y="30"/>
+          </shape>
+          <shape modelObjectName="ZPS_O1100" modelObjectNameSpace="NCDOT" modelObjectType="catalog">
+            <upperLeftCorner x="312" y="30"/>
+          </shape>
+        </shapes>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="_BIC_ZFM_EXPNS" order="15" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="_BIC_ZFM_EXPNS"/>
+        <measureMapping schemaName="NCDOT" columnObjectName="ZPS_O1100" columnName="/BIC/ZFM_EXPNS"/>
+      </measure>
+      <measure id="_BIC_ZFM_EXCEX" order="16" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="_BIC_ZFM_EXCEX"/>
+        <measureMapping schemaName="NCDOT" columnObjectName="ZPS_O1100" columnName="/BIC/ZFM_EXCEX"/>
+      </measure>
+      <measure id="_BIC_ZPS_CMAMT" order="17" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="_BIC_ZPS_CMAMT"/>
+        <measureMapping schemaName="NCDOT" columnObjectName="ZPS_O1100" columnName="/BIC/ZPS_CMAMT"/>
+      </measure>
+      <measure id="_BIC_ZPS_LEAMT" order="18" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="_BIC_ZPS_LEAMT"/>
+        <measureMapping schemaName="NCDOT" columnObjectName="ZPS_O1100" columnName="/BIC/ZPS_LEAMT"/>
+      </measure>
+      <measure id="_BIC_ZPS_TEAMT" order="19" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="_BIC_ZPS_TEAMT"/>
+        <measureMapping schemaName="NCDOT" columnObjectName="ZPS_O1100" columnName="/BIC/ZPS_TEAMT"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures>
+      <measure id="ProjectCount" hidden="false" order="21" aggregationType="sum" measureType="simple" calculatedMeasureType="counter" datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+        <descriptions defaultDescription="ProjectCount"/>
+        <exceptionAggregation exceptionAggregationType="countDistinct">
+          <attribute attributeName="_BIC_ZTIPSUB" dimensionUri="/vglearn01/attributeviews/AT_SUBTIP"/>
+        </exceptionAggregation>
+        <formula>1</formula>
+      </measure>
+    </calculatedMeasures>
+    <restrictedMeasures>
+      <measure id="LetEstimate" hidden="false" order="20" baseMeasure="#_BIC_ZPS_LEAMT">
+        <descriptions defaultDescription="LetEstimate"/>
+        <restriction logicalOperator="AND">
+          <filter xsi:type="Privilege:AttributeFilter" attributeName="MLST_USE">
+            <valueFilter xsi:type="AccessControl:SingleValueFilter" including="true" value="M0435"/>
+            <valueFilter xsi:type="AccessControl:SingleValueFilter" including="true" value="M0545"/>
+          </filter>
+          <attributeName>MLST_USE</attributeName>
+        </restriction>
+      </measure>
+    </restrictedMeasures>
+    <sharedDimensions>
+      <logicalJoin associatedObjectUri="/vglearn01/attributeviews/AT_SUBTIP">
+        <attributes>
+          <attributeRef>#_BIC_ZTIPSUB</attributeRef>
+        </attributes>
+        <associatedAttributeNames>
+          <attributeName>_BIC_ZTIPSUB</attributeName>
+        </associatedAttributeNames>
+        <properties joinOperator="Equal" joinType="referential"/>
+        <associatedAttributeFeatures/>
+      </logicalJoin>
+    </sharedDimensions>
+    <layout>
+      <shapes>
+        <shape modelObjectName="MEASURE_GROUP" modelObjectType="repository">
+          <upperLeftCorner x="78" y="110"/>
+        </shape>
+        <shape modelObjectName="/vglearn01/attributeviews/AT_SUBTIP" modelObjectType="repository">
+          <upperLeftCorner x="426" y="30"/>
+        </shape>
+        <shape modelObjectName="LogicalView" modelObjectNameSpace="MeasureGroup" modelObjectType="repository">
+          <upperLeftCorner x="40" y="85"/>
+          <rectangleSize height="0" width="0"/>
+        </shape>
+      </shapes>
+    </layout>
+  </privateMeasureGroup>
+</Cube:cube>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dimension:dimension xmlns:Dimension="http://www.sap.com/ndb/BiModelDimension.ecore" schemaVersion="1.2" id="AT_SUBTIP" applyPrivilegeType="ANALYTIC_PRIVILEGE" checkAnalyticPrivileges="true" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" translationRelevant="true" visibility="internal" dimensionType="Standard">
+  <origin/>
+  <descriptions defaultDescription="AT_SUBTIP"/>
+  <metadata changedAt="2018-05-17 07:54:43.904"/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <attributes>
+    <attribute id="_BIC_ZTIPSUB" key="true" order="1" attributeHierarchyActive="false" displayAttribute="false">
+      <descriptions defaultDescription="_BIC_ZTIPSUB"/>
+      <keyMapping schemaName="NCDOT" columnObjectName="ZPS_AO1900" columnName="/BIC/ZTIPSUB"/>
+    </attribute>
+    <attribute id="_BIC_ZTIP" order="2" attributeHierarchyActive="false" displayAttribute="false">
+      <descriptions defaultDescription="_BIC_ZTIP"/>
+      <keyMapping schemaName="NCDOT" columnObjectName="ZPS_AO1900" columnName="/BIC/ZTIP"/>
+    </attribute>
+    <attribute id="_BIC_ZPS_LTYPE" order="3" attributeHierarchyActive="false" displayAttribute="false">
+      <descriptions defaultDescription="_BIC_ZPS_LTYPE"/>
+      <keyMapping schemaName="NCDOT" columnObjectName="ZPS_AO1900" columnName="/BIC/ZPS_LTYPE"/>
+    </attribute>
+    <attribute id="_BIC_ZDIVISION" order="4" attributeHierarchyActive="false" displayAttribute="false">
+      <descriptions defaultDescription="_BIC_ZDIVISION"/>
+      <keyMapping schemaName="NCDOT" columnObjectName="ZPS_AO1900" columnName="/BIC/ZDIVISION"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <privateDataFoundation>
+    <tableProxies>
+      <tableProxy>
+        <table schemaName="NCDOT" columnObjectName="ZPS_AO1900"/>
+      </tableProxy>
+    </tableProxies>
+    <joins/>
+    <layout>
+      <shapes>
+        <shape modelObjectName="ZPS_AO1900" modelObjectNameSpace="NCDOT" modelObjectType="catalog">
+          <upperLeftCorner x="70" y="30"/>
+        </shape>
+        <shape modelObjectName="DataFoundation" modelObjectNameSpace="DataFoundation" modelObjectType="repository">
+          <upperLeftCorner x="40" y="85"/>
+          <rectangleSize/>
+        </shape>
+      </shapes>
+    </layout>
+  </privateDataFoundation>
+  <hierarchies/>
+</Dimension:dimension>

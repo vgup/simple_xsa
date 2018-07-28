@@ -1,0 +1,10 @@
+namespace vglearn01.cds;
+
+@Schema: 'VGUPTA'
+
+Context test01 {
+type PMDB_kpi: Integer;
+}
+
+
+

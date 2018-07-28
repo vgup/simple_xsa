@@ -1,0 +1,10 @@
+PROCEDURE "VGUPTA"."vglearn01.cds::SALES_REP" ( )
+   LANGUAGE SQLSCRIPT
+   SQL SECURITY INVOKER
+   --DEFAULT SCHEMA <default_schema_name>
+   READS SQL DATA AS
+BEGIN
+   /*************************************
+       Write your procedure logic 
+   *************************************/
+END

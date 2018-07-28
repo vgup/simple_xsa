@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dimension:dimension xmlns:Dimension="http://www.sap.com/ndb/BiModelDimension.ecore" schemaVersion="1.2" id="AV_PROJECT" applyPrivilegeType="ANALYTIC_PRIVILEGE" checkAnalyticPrivileges="true" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" translationRelevant="true" visibility="internal" dimensionType="Standard">
+  <origin/>
+  <descriptions defaultDescription="AV_PROJECT"/>
+  <metadata changedAt="2018-05-17 07:44:21.184"/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <attributes>
+    <attribute id="_BIC_ZPMMETRIC" key="true" order="1" attributeHierarchyActive="false" displayAttribute="false">
+      <descriptions defaultDescription="_BIC_ZPMMETRIC"/>
+      <keyMapping schemaName="NCDOT" columnObjectName="PZPMMETRIC" columnName="/BIC/ZPMMETRIC"/>
+    </attribute>
+    <attribute id="OBJVERS" order="2" attributeHierarchyActive="false" displayAttribute="false">
+      <descriptions defaultDescription="OBJVERS"/>
+      <keyMapping schemaName="NCDOT" columnObjectName="PZPMMETRIC" columnName="OBJVERS"/>
+    </attribute>
+    <attribute id="CHANGED" order="3" attributeHierarchyActive="false" displayAttribute="false">
+      <descriptions defaultDescription="CHANGED"/>
+      <keyMapping schemaName="NCDOT" columnObjectName="PZPMMETRIC" columnName="CHANGED"/>
+    </attribute>
+    <attribute id="_BIC_ZPERFMEAS" order="4" attributeHierarchyActive="false" displayAttribute="false">
+      <descriptions defaultDescription="_BIC_ZPERFMEAS"/>
+      <keyMapping schemaName="NCDOT" columnObjectName="PZPMMETRIC" columnName="/BIC/ZPERFMEAS"/>
+    </attribute>
+    <attribute id="_BIC_ZMEASVAL" order="5" attributeHierarchyActive="false" displayAttribute="false">
+      <descriptions defaultDescription="_BIC_ZMEASVAL"/>
+      <keyMapping schemaName="NCDOT" columnObjectName="PZPMMETRIC" columnName="/BIC/ZMEASVAL"/>
+    </attribute>
+    <attribute id="_BIC_ZPMEASVAL" order="6" attributeHierarchyActive="false" displayAttribute="false">
+      <descriptions defaultDescription="_BIC_ZPMEASVAL"/>
+      <keyMapping schemaName="NCDOT" columnObjectName="PZPMMETRIC" columnName="/BIC/ZPMEASVAL"/>
+    </attribute>
+    <attribute id="UNIT" order="7" attributeHierarchyActive="false" displayAttribute="false">
+      <descriptions defaultDescription="UNIT"/>
+      <keyMapping schemaName="NCDOT" columnObjectName="PZPMMETRIC" columnName="UNIT"/>
+    </attribute>
+    <attribute id="CALDAY" order="8" attributeHierarchyActive="false" displayAttribute="false">
+      <descriptions defaultDescription="CALDAY"/>
+      <keyMapping schemaName="NCDOT" columnObjectName="PZPMMETRIC" columnName="CALDAY"/>
+    </attribute>
+    <attribute id="_BIC_ZLTARVAL" order="9" attributeHierarchyActive="false" displayAttribute="false">
+      <descriptions defaultDescription="_BIC_ZLTARVAL"/>
+      <keyMapping schemaName="NCDOT" columnObjectName="PZPMMETRIC" columnName="/BIC/ZLTARVAL"/>
+    </attribute>
+    <attribute id="_BIC_ZHTARVAL" order="10" attributeHierarchyActive="false" displayAttribute="false">
+      <descriptions defaultDescription="_BIC_ZHTARVAL"/>
+      <keyMapping schemaName="NCDOT" columnObjectName="PZPMMETRIC" columnName="/BIC/ZHTARVAL"/>
+    </attribute>
+    <attribute id="_BIC_ZMETPER" order="11" attributeHierarchyActive="false" displayAttribute="false">
+      <descriptions defaultDescription="_BIC_ZMETPER"/>
+      <keyMapping schemaName="NCDOT" columnObjectName="PZPMMETRIC" columnName="/BIC/ZMETPER"/>
+    </attribute>
+    <attribute id="_BIC_ZPMETPER" order="12" attributeHierarchyActive="false" displayAttribute="false">
+      <descriptions defaultDescription="_BIC_ZPMETPER"/>
+      <keyMapping schemaName="NCDOT" columnObjectName="PZPMMETRIC" columnName="/BIC/ZPMETPER"/>
+    </attribute>
+    <attribute id="_BIC_ZREVDIRFL" order="13" attributeHierarchyActive="false" displayAttribute="false">
+      <descriptions defaultDescription="_BIC_ZREVDIRFL"/>
+      <keyMapping schemaName="NCDOT" columnObjectName="PZPMMETRIC" columnName="/BIC/ZREVDIRFL"/>
+    </attribute>
+    <attribute id="_BIC_ZIMDBGOAL" order="14" attributeHierarchyActive="false" displayAttribute="false">
+      <descriptions defaultDescription="_BIC_ZIMDBGOAL"/>
+      <keyMapping schemaName="NCDOT" columnObjectName="PZPMMETRIC" columnName="/BIC/ZIMDBGOAL"/>
+    </attribute>
+    <attribute id="_BIC_ZMETLINK" order="15" attributeHierarchyActive="false" displayAttribute="false">
+      <descriptions defaultDescription="_BIC_ZMETLINK"/>
+      <keyMapping schemaName="NCDOT" columnObjectName="PZPMMETRIC" columnName="/BIC/ZMETLINK"/>
+    </attribute>
+    <attribute id="_BIC_ZMETDEFN" order="16" attributeHierarchyActive="false" displayAttribute="false">
+      <descriptions defaultDescription="_BIC_ZMETDEFN"/>
+      <keyMapping schemaName="NCDOT" columnObjectName="PZPMMETRIC" columnName="/BIC/ZMETDEFN"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <privateDataFoundation>
+    <tableProxies>
+      <tableProxy>
+        <table schemaName="NCDOT" columnObjectName="PZPMMETRIC"/>
+      </tableProxy>
+    </tableProxies>
+    <joins/>
+    <layout>
+      <shapes>
+        <shape modelObjectName="PZPMMETRIC" modelObjectNameSpace="NCDOT" modelObjectType="catalog">
+          <upperLeftCorner x="70" y="30"/>
+        </shape>
+        <shape modelObjectName="DataFoundation" modelObjectNameSpace="DataFoundation" modelObjectType="repository">
+          <upperLeftCorner x="40" y="85"/>
+          <rectangleSize/>
+        </shape>
+      </shapes>
+    </layout>
+  </privateDataFoundation>
+  <hierarchies/>
+</Dimension:dimension>

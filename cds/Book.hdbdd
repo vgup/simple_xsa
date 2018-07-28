@@ -1,0 +1,10 @@
+namespace vglearn01.cds;
+@Schema: 'VGUPTA' 
+@Catalog.tableType: #COLUMN 
+@Catalog.index: [ { name : 'MYINDEX1', unique : true, order : #DESC, elementNames : ['ISBN'] }  ]  
+entity Book {
+    key Author    : String(100);
+    key BookTitle : String(100);
+        ISBN      : Integer not null;
+        Publisher : String(100);
+};

@@ -1,0 +1,21 @@
+PROCEDURE "NCDOT"."vglearn01::Test_01" ( 
+	OUT OUTPUT_TABLE TT_SUBTIP_02)
+   LANGUAGE SQLSCRIPT
+   SQL SECURITY INVOKER
+   DEFAULT SCHEMA "NCDOT"
+   READS SQL DATA AS
+BEGIN
+   /*************************************
+       Write your procedure logic 
+   *************************************/
+   var1 = SELECT T1."/BIC/ZTIPSUB", T1."/BIC/ZPS_LEAMT", T2."/BIC/ZTEDATE"
+   	FROM ZPS_O1100 AS T1 INNER JOIN
+   	ZPS_AO1900 AS T2
+   	ON T1."/BIC/ZTIPSUB" = T2."/BIC/ZTIPSUB";
+   	
+   	OUTPUT_TABLE = SELECT "/BIC/ZTIPSUB" AS SUBTIP,
+   	SUM ("/BIC/ZPS_LEAMT") AS LATEST_ESTIMATE,
+   		MAX ("/BIC/ZTEDATE") AS BASIC_PLAN_DATE
+   	FROM :var1
+   	GROUP BY "/BIC/ZTIPSUB";
+END
